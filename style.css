@@ -1,0 +1,133 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2, h4 {
+  letter-spacing: 2px;
+}
+
+#btns {
+  margin: 30px;
+}
+
+#btns button {
+  margin-right: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+#btns button:hover {
+  background-color: aqua;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 350px;
+  gap: 30px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 2px 10px 7px rgba(0,0,0,0.12);
+  border-radius: 6%;
+  width: 250px;
+  height: 350px;
+}
+
+.picture {
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 4%;
+  border-top-right-radius: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  border-top-left-radius: 4%;
+  border-top-right-radius: 4%;
+}
+
+.content {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.brand, .name, .information {
+  font-size: smaller;
+  margin: 5px;
+}
+
+.brand, .information {
+  color: rgb(212, 208, 208);
+  opacity: 5;
+}
+
+.prices {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: small;
+}
+
+.discount {
+  color: red;
+}
+
+.add-btn {
+  background-color: white;
+  border: 1px solid black;
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: aqua;
+}
+
+@media (max-width: 1200px) {
+  #container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  #container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #btns button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  #container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .product {
+    width: 300px;
+  }
+
+  #btns button {
+    margin-bottom: 20px;
+  }
+}
